@@ -34,7 +34,7 @@ if($error != true){
     $message .= "<b>Name</b> ".$name."<br /> \n";
     $message .= "<b>Email</b> ".$email."<br /> \n";
     echo 'test - > ' . $to_mail .$subject. $message . $headers;
-    if(mail($to_mail,$subject,$message,$headers))
+    if(mail($to_mail,$subject,$message))
     {
         echo "mail sent";
         $mail_sent = 1;
