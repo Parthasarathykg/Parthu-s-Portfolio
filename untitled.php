@@ -7,22 +7,14 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 
-//define the receiver of the email
-$to = 'parthukg1@gmail.com';
-//define the subject of the email
-$subject = 'Test email';
-//define the message to be sent. 
-$message = "Hello World!\r\nThis is my mail.";
-//define the headers we want passed. 
-$header = "From: amirtha@mailinator.com"; // must be a genuine address
+// The message
+$message = "Line 1\r\nLine 2\r\nLine 3";
 
+// In case any of our lines are larger than 70 characters, we should use wordwrap()
+$message = wordwrap($message, 70, "\r\n");
 
-ini_set("sendmail_from", "");
-//send the email
-$mail_sent = mail($to, $subject, $message);
-//if the message is sent successfully print "Mail sent". Otherwise print "Mail failed" 
-
-echo $mail_sent ? "Mail sent" : "Mail failed";
+// Send
+mail('caffeinated@example.com', 'My Subject', $message);
 
 /*
 //$to_mail = "architects@palavin.com,t.lavin@palavin.com,12yorkcourt@gmail.com";
