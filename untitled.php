@@ -4,7 +4,7 @@
     $message = $_POST['message'];
     $headers = 'From: '.$_POST['email']. "\r\n".
         'Reply-To: myemail@mail.com' . "\r\n".
-        'X-Mailer: PHP/'.phpversion();
+        'X-Mailer: PHP/'.phpversion(); 
 
 mail($to, $subject, $message, $headers); 
 ?>  
