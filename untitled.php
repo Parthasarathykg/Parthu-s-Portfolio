@@ -14,14 +14,14 @@ $subject = 'Test email';
 //define the message to be sent. 
 $message = "Hello World!\r\nThis is my mail.";
 //define the headers we want passed. 
-$header = "From: " . $email; // must be a genuine address
+$header = "From: amirtha@mailinator.com"; // must be a genuine address
 
 
-ini_set("sendmail_from", "");
+//ini_set("sendmail_from", "");
 //send the email
 $mail_sent = mail($to, $subject, $message, $header);
 //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed" 
-echo 'test - > ' . $to .$subject. $message . $header;
+
 echo $mail_sent ? "Mail sent" : "Mail failed";
 
 /*
