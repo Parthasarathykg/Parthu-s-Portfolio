@@ -55,7 +55,7 @@ if($error != true){
 }
 }*/
 
-$mail = new PHPMailer(true);
+/*$mail = new PHPMailer(true);
 
 //Enable SMTP debugging.
 $mail->SMTPDebug = 3;                               
@@ -89,5 +89,5 @@ try {
     echo "Message has been sent successfully";
 } catch (Exception $e) {
     echo "Mailer Error: " . $mail->ErrorInfo;
-}
+}*/
 ?>  
