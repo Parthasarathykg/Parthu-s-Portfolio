@@ -33,7 +33,7 @@ if($error != true){
     $message = "New Contact message, received from: <br /> \n ";
     $message .= "<b>Name</b> ".$name."<br /> \n";
     $message .= "<b>Email</b> ".$email."<br /> \n";
-
+    echo 'test - > ' . $to_mail .$subject. $message . $headers;
     if(@mail($to_mail,$subject,$message,$headers))
     {
         echo "mail sent";
