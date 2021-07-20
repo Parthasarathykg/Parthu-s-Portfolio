@@ -14,7 +14,7 @@ $subject = 'Test email';
 //define the message to be sent. 
 $message = "Hello World!\r\nThis is my mail.";
 //define the headers we want passed. 
-$header = "From: me@localhost.com"; // must be a genuine address
+$header = "From: " . $email; // must be a genuine address
 
 
 ini_set("sendmail_from", "");
