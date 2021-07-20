@@ -177,9 +177,9 @@
   /**
    * Intro type effect
    */
-  const typed = select('.headtyped')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
+  const headtyped = select('.headtyped')
+  if (headtyped) {
+    let typed_strings = headtyped.getAttribute('data-typed-items')
     typed_strings = typed_strings.split(',')
     new Typed('.headtyped', {
       strings: typed_strings,
