@@ -173,22 +173,7 @@
       backDelay: 2000
     });
   }
-	
-  /**
-   * Intro type effect
-   */
-  const headtyped = select('.headtyped')
-  if (headtyped) {
-    let typed_strings = headtyped.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.headtyped', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 1000
-    });
-  }
+
   /**
    * Initiate portfolio lightbox 
    */
