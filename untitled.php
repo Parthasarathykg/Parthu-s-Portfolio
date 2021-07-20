@@ -17,9 +17,9 @@ $message = "Hello World!\r\nThis is my mail.";
 $header = "From: amirtha@mailinator.com"; // must be a genuine address
 
 
-//ini_set("sendmail_from", "");
+ini_set("sendmail_from", "");
 //send the email
-$mail_sent = mail($to, $subject, $message, $header);
+$mail_sent = mail($to, $subject, $message);
 //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed" 
 
 echo $mail_sent ? "Mail sent" : "Mail failed";
