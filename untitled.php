@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-$to      = 'parthukg1@gmail.com'; //your email
+$to      = 'parthukg1@mailinator.com'; //your email
 $subject = 'from my website  - email form'; 
 $message = $_POST['message'];
 $headers = 'From: '.$_POST['email']. "\r\n".
