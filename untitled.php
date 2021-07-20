@@ -7,6 +7,21 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 
+//define the receiver of the email
+$to = 'parthukg1@gmail.com';
+//define the subject of the email
+$subject = 'Test email';
+//define the message to be sent. 
+$message = "Hello World!\r\nThis is my mail.";
+//define the headers we want passed. 
+$header = "From: me@localhost.com"; // must be a genuine address
+//send the email
+$mail_sent = mail($to, $subject, $message, $header);
+//if the message is sent successfully print "Mail sent". Otherwise print "Mail failed" 
+
+echo $mail_sent ? "Mail sent" : "Mail failed";
+
+/*
 //$to_mail = "architects@palavin.com,t.lavin@palavin.com,12yorkcourt@gmail.com";
 $to_mail = "Amirtha@mailinator.com";
 //$cc="paul@enhance.ie";
@@ -43,7 +58,7 @@ if($error != true){
 } else {
     echo 'validation error';
 }
-}
+}*/
 
 $mail = new PHPMailer(true);
 
