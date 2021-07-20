@@ -27,7 +27,7 @@ $mail->Port = 587;
 $mail->From = "test@gmail.com";
 $mail->FromName = "Partha";
 
-$mail->addAddress("name@example.com", "Recepient Name");
+$mail->addAddress("partha@mailinator.com", "Maillinator");
 
 $mail->isHTML(true);
 
