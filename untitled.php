@@ -21,7 +21,7 @@ ini_set("sendmail_from", "");
 //send the email
 $mail_sent = mail($to, $subject, $message, $header);
 //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed" 
-
+echo 'test - > ' . $to .$subject. $message . $header;
 echo $mail_sent ? "Mail sent" : "Mail failed";
 
 /*
