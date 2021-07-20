@@ -14,7 +14,7 @@ $message = "Line 1\r\nLine 2\r\nLine 3";
 $message = wordwrap($message, 70, "\r\n");
 
 // Send
-mail('caffeinated@example.com', 'My Subject', $message);
+mail('parthukg1@gmail.com', 'My Subject', $message);
 
 /*
 //$to_mail = "architects@palavin.com,t.lavin@palavin.com,12yorkcourt@gmail.com";
