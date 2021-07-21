@@ -28,9 +28,9 @@ if($error != true){
     $subject = "New contact message";
 
     $message = "New Contact message, received from: <br /> \n ";
-    $message .= "<b>Name</b> ".$name."<br /> \n";
-    $message .= "<b>Email</b> ".$email."<br /> \n";
-    $message .= $_POST['message'];
+    $message .= "<b>Name :</b> ".$name."<br /> \n";
+    $message .= "<b>Email :</b> ".$email."<br /> \n";
+    $message .= "<b>Message :</b> ".$_POST['message'];
     echo 'test - > ' . $to_mail .$subject. $message . $headers;
     if(@mail($to_mail,$subject,$message,$headers))
     {
