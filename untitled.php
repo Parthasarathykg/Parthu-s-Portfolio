@@ -23,10 +23,7 @@ if($email == "")
     $error = true;
 
 if($error != true){
-    $headers = 'From: <' . $email .'>'."\r\n";
-    //$headers .= 'CC: "'.$cc.'" <'.$cc.'>'."\r\n";
-    $headers .= 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=utf-8' . "";
+    $headers = 'From: ' . $email . "\r\n";
 
     $subject = "New contact message";
 
