@@ -37,6 +37,7 @@ if($error != true){
         $mail_sent = 1;
     }
     else echo "mail not sent";
+    print_r(error_get_last()['message']);
 } else {
     echo 'validation error';
 }
