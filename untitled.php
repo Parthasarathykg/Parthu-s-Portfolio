@@ -105,7 +105,7 @@ $mail2->addAddress('parthukg1@gmail.com', 'Parthu');
 
 $mail2->isHTML(true);
 $mail2->Subject = $name . " sent you a message";
-$mail2->Body = "<i>Thank you for taking your time and writing in! I Will try to get in touch with you soon.</i>"; 
+$mail2->Body = $message; 
 $mail2->AltBody = "<i>Thank you for taking your time and writing in! I Will try to get in touch with you soon.</i>";
 
 try {
