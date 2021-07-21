@@ -97,8 +97,8 @@ $mail2->SMTPSecure = "tls";
 //Set TCP port to connect to
 $mail2->Port = 587;                                   
 
-$mail2->From =  $name;
-$mail2->FromName = $email;
+$mail2->From =  $email;
+$mail2->FromName = $name;
 
 $mail2->addAddress('parthukg1@gmail.com', 'Parthu');
 
