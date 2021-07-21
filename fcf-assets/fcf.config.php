@@ -75,7 +75,7 @@ define('EMAIL_OUT_FROM_NAME', '');
 // EMAIL MESSAGE
 // *************
 define('EMAIL_TO', 'parthukg1@gmail.com');
-define('EMAIL_TO_NAME', '');
+define('EMAIL_TO_NAME', 'parthu');
 
 define('EMAIL_TO_CC', '');
 define('EMAIL_TO_CC_NAME', '');
@@ -84,7 +84,7 @@ define('EMAIL_TO_BCC', '');
 define('EMAIL_TO_BCC_NAME', '');
 
 define('EMAIL_FROM', 'parthukg1@gmail.com');
-define('EMAIL_FROM_NAME', '');
+define('EMAIL_FROM_NAME', 'parthu');
 
 define('EMAIL_REPLY_TO', 'FIELD:Email');
 define('EMAIL_REPLY_TO_NAME', 'FIELD:Email');
