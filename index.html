@@ -694,7 +694,7 @@
                       </p>
                     </form>-->
 					
-                      <form id="contactForm" action="/untitled.php" method="post" role="form" class="php-email-form">
+                      <form method="post" role="form" class="php-email-form">
                         <div class="row">
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
@@ -722,7 +722,7 @@
                             <div class="sent-message">Your message has been sent. Thank you for writing in!</div>
                           </div>
                           <div class="col-md-12 text-center">
-                            <button type="submit" name="submit" value="submit" class="button button-a button-big button-rouded">Send Message</button>
+                            <button type="button" name="submit" value="submit" class="button button-a button-big button-rouded" onclick="return clickButton();">Send Message</button>
                           </div>
                         </div>
                       </form>
@@ -798,6 +798,33 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js">
+  </script>
+  <script type="text/javascript">
+  function clickButton(){
+  var name=document.getElementById('name').value;
+  var email=document.getElementById('email').value;
+  var message=document.getElementById('message').value;
+  $.ajax({
+          type:"post",
+          url:"untitled.php",
+          data: 
+          {  
+             'name' :name,
+             'email' :email,
+             'message' : message
+          },
+          cache:false,
+          success: function (html) 
+          {
+             alert('Data Send');
+             $('#msg').html(html);
+          }
+          });
+          return false;
+   }
+  </script>
 
 </body>
 
