@@ -11,7 +11,7 @@ require 'PHPMailer/src/SMTP.php';
 $to_mail = "parthukg1@gmail.com";
 //$cc="paul@enhance.ie";
 $mail_sent = 0;
-if(isset($_POST['submit'])){
+//if(isset($_POST['submit'])){
     //echo "the form was submitted";
 
 $name = trim(strip_tags($_POST['name']));
@@ -42,7 +42,7 @@ if($error != true){
 } else {
     echo 'validation error';
 }
-}
+//}
 
 $mail = new PHPMailer(true);
 
