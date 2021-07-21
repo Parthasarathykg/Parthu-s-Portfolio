@@ -78,4 +78,40 @@ try {
 } catch (Exception $e) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 }
+
+$mail2 = new PHPMailer(true);
+
+//Enable SMTP debugging.
+$mail2->SMTPDebug = 3;                               
+//Set PHPMailer to use SMTP.
+$mail2->isSMTP();            
+//Set SMTP host name                          
+$mail2->Host = "smtp.gmail.com";
+//Set this to true if SMTP host requires authentication to send email
+$mail2->SMTPAuth = true;                          
+//Provide username and password     
+$mail2->Username = "parthukg1@gmail.com";                 
+$mail2->Password = "ecyfkszdlutxsxos";                           
+//If SMTP requires TLS encryption then set it
+$mail2->SMTPSecure = "tls";                           
+//Set TCP port to connect to
+$mail2->Port = 587;                                   
+
+$mail2->From =  $name;
+$mail2->FromName = $email;
+
+$mail2->addAddress('parthukg1@gmail.com', 'Parthu');
+
+$mail2->isHTML(true);
+
+$mail2->Subject = $name . "sent you a message";
+$mail2->Body = "<i>".$message."</i>";
+$mail2->AltBody = $message;
+
+try {
+    $mail2->send();
+    echo "Message has been sent successfully";
+} catch (Exception $e) {
+    echo "Mailer Error: " . $mail2->ErrorInfo;
+}
 ?>  
