@@ -104,10 +104,10 @@ $mail2->FromName = $name;
 $mail2->addAddress('parthukg1@gmail.com', 'Parthu');
 
 $mail2->isHTML(true);
-
+$body = "La Personne qui nous contacte est: " . $name . " qui travaille pour: le sujet du message etant: et le message est: " . $message . " nous pouvons la rejoindre par courriel: " . $email . " ou encore par telephone: " ;
 $mail2->Subject = $name . " sent you a message";
-$mail->Body = $message; 
-$mail2->AltBody = $message;
+$mail->Body = $body; 
+$mail2->AltBody = $body;
 
 try {
     $mail2->send();
