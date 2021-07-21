@@ -104,8 +104,8 @@ $mail2->addAddress('parthukg1@gmail.com', 'Parthu');
 
 $mail2->isHTML(true);
 
-$mail2->Subject = $name . "sent you a message";
-$mail2->Body = "<i>".$message."</i>";
+$mail2->Subject = $name . " sent you a message";
+$mail->Body = $_POST["message"]; 
 $mail2->AltBody = $message;
 
 try {
