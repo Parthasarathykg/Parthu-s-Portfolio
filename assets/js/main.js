@@ -7,6 +7,10 @@
 (function() {
   "use strict";
 
+  $("#contactForm").submit(function(e) {
+      e.preventDefault();
+  });
+
   /**
    * Easy selector helper function
    */
