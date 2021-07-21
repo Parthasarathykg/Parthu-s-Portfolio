@@ -6,7 +6,9 @@
 */
 (function() {
   "use strict";
-
+  var form = document.getElementById("contactForm");
+  function handleForm(event) { event.preventDefault(); } 
+  form.addEventListener('submit', handleForm);
   /**
    * Easy selector helper function
    */
