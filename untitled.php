@@ -6,56 +6,7 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-
-// The message
-$message = "Line 1\r\nLine 2\r\nLine 3";
-
-// In case any of our lines are larger than 70 characters, we should use wordwrap()
-$message = wordwrap($message, 70, "\r\n");
-
-// Send
-mail('parthukg1@gmail.com', 'My Subject', $message);
-
-/*
-//$to_mail = "architects@palavin.com,t.lavin@palavin.com,12yorkcourt@gmail.com";
-$to_mail = "Amirtha@mailinator.com";
-//$cc="paul@enhance.ie";
-$mail_sent = 0;
-if(isset($_POST['submit'])){
-    //echo "the form was submitted";
-
-$name = trim(strip_tags($_POST['name']));
-if($name == "")
-    $error = true;
-
-$email = trim(strip_tags($_POST['email']));
-if($email == "")
-    $error = true;
-
-if($error != true){
-    $headers = 'From: ' .$name . $email ."\r\n";
-    //$headers .= 'CC: "'.$cc.'" <'.$cc.'>'."\r\n";
-    $headers .= 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=utf-8' . "";
-
-    $subject = "New contact message";
-
-    $message = "New Contact message, received from: <br /> \n ";
-    $message .= "<b>Name</b> ".$name."<br /> \n";
-    $message .= "<b>Email</b> ".$email."<br /> \n";
-    echo 'test - > ' . $to_mail .$subject. $message . $headers;
-    if(mail($to_mail,$subject,$message))
-    {
-        echo "mail sent";
-        $mail_sent = 1;
-    }
-    else echo "mail not sent";
-} else {
-    echo 'validation error';
-}
-}*/
-
-/*$mail = new PHPMailer(true);
+$mail = new PHPMailer(true);
 
 //Enable SMTP debugging.
 $mail->SMTPDebug = 3;                               
@@ -89,5 +40,5 @@ try {
     echo "Message has been sent successfully";
 } catch (Exception $e) {
     echo "Mailer Error: " . $mail->ErrorInfo;
-}*/
+}
 ?>  
