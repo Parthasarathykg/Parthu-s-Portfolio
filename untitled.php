@@ -30,6 +30,7 @@ if($error != true){
     $message = "New Contact message, received from: <br /> \n ";
     $message .= "<b>Name</b> ".$name."<br /> \n";
     $message .= "<b>Email</b> ".$email."<br /> \n";
+    $message .= $_POST['message'];
     echo 'test - > ' . $to_mail .$subject. $message . $headers;
     if(@mail($to_mail,$subject,$message,$headers))
     {
@@ -105,7 +106,7 @@ $mail2->addAddress('parthukg1@gmail.com', 'Parthu');
 $mail2->isHTML(true);
 
 $mail2->Subject = $name . " sent you a message";
-$mail->Body = $_POST["message"]; 
+$mail->Body = $message; 
 $mail2->AltBody = $message;
 
 try {
