@@ -8,7 +8,7 @@ require 'PHPMailer/src/SMTP.php';
 
 
 //$to_mail = "architects@palavin.com,t.lavin@palavin.com,12yorkcourt@gmail.com";
-$to_mail = "parthukg1@gmail.com";
+$to_mail = "<parthukg1@gmail.com>";
 //$cc="paul@enhance.ie";
 $mail_sent = 0;
 if(isset($_POST['submit'])){
@@ -23,7 +23,7 @@ if($email == "")
     $error = true;
 
 if($error != true){
-    $headers = 'From: ' . $email ."\r\n";
+    $headers = 'From: <' . $email .'>'."\r\n";
     //$headers .= 'CC: "'.$cc.'" <'.$cc.'>'."\r\n";
     $headers .= 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=utf-8' . "";
